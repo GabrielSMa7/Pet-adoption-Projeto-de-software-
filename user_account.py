@@ -1,38 +1,40 @@
-user_name = "Não cadastrado"
-user_age = "Não cadastrado"
-user_adress = "Não cadastrado"
-user_email = "Não cadastrado"
+import os
 
-while True:
+user_name = "Quest"
+user_age = "Unknown"
+user_adress = "Unknown"
+user_email = "Unknown"
 
-    print("\n")
+def user_profile():
+    while True:
+        os.system("cls")
 
-    print(f"Nome: {user_name}\nIdade: {user_age}\nEndereço: {user_adress}\nEmail: {user_email}")
+        print(f"Name: {user_name}\nAge: {user_age}\nAdress: {user_adress}\nEmail: {user_email}")
 
-    escolha = input("para criar uma conta digite 1 e para alterar digite 2 e para fechar digite 3: ")
+        escolha = input("--Criar conta digite (1)\n--Alterar dados da conta (2)\n--Voltar digite (3)\n")
 
-    if escolha == "1":
-        user_name = input("Digite seu nome: ")
-        user_age = input("Digite sua idade: ")
-        user_adress = input("Digite seu endereço: ")
-        user_email = input("Digite seu email: ")
-    elif escolha == "2":
-        print("Deseja alterar nome? y/n: ")
-        control = input()
-        if control == "y":
-            user_name = input("Digite seu nome: ")
-        print("Deseja alterar idade? y/n: ")
-        control = input()
-        if control == "y":
-            user_age = input("Digite sua idade: ")
-        print("Deseja alterar endereço? y/n: ")
-        control = input()
-        if control == "y":
-            user_adress = input("Digite seu endereço: ")
-        print("Deseja alterar email? y/n: ")
-        control = input()
-        if control == "y":
-            user_email = input("Digite seu email: ")
-    elif escolha == "3":
-        break
-    print("\n")
+        if escolha == "1":
+            user_name = input("Type your name: ")
+            user_age = input("Type your age: ")
+            user_adress = input("Type your adress: ")
+            user_email = input("Type your email: ")
+        elif escolha == "2":
+            print("Change your name? y/n: ")
+            control = input()
+            if control == "y":
+                user_name = input("Type your name: ")
+            print("Deseja alterar idade? y/n: ")
+            control = input()
+            if control == "y":
+                user_age = input("Digite sua idade: ")
+            print("Deseja alterar endereço? y/n: ")
+            control = input()
+            if control == "y":
+                user_adress = input("Type your adress:")
+            print("Deseja alterar email? y/n: ")
+            control = input()
+            if control == "y":
+                user_email = input("Type your email: ")
+        elif escolha == "3":
+            break
+        print("\n")

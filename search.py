@@ -4,5 +4,5 @@ def filtr(list, fltrs, sps):
     for item, item_info in list.items():
         if sps == item_info[fltrs]:
           newlist[item] = list[item].copy()
-    print(f"{len(newlist)} pets available!\n")
+    print(f"{len(newlist)} itens available!\n")
     return newlist
