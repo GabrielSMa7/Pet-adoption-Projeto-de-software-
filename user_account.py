@@ -7,11 +7,15 @@ user_email = "Unknown"
 
 def user_profile():
     while True:
+        global user_name
+        global user_age
+        global user_adress
+        global user_email
         os.system("cls")
 
         print(f"Name: {user_name}\nAge: {user_age}\nAdress: {user_adress}\nEmail: {user_email}")
 
-        escolha = input("--Criar conta digite (1)\n--Alterar dados da conta (2)\n--Voltar digite (3)\n")
+        escolha = input("--Creat account (1)\n--Change account (2)\n--Exit (3)\n")
 
         if escolha == "1":
             user_name = input("Type your name: ")
@@ -23,15 +27,15 @@ def user_profile():
             control = input()
             if control == "y":
                 user_name = input("Type your name: ")
-            print("Deseja alterar idade? y/n: ")
+            print("Change your age? y/n: ")
             control = input()
             if control == "y":
                 user_age = input("Digite sua idade: ")
-            print("Deseja alterar endereço? y/n: ")
+            print("Change adress? y/n: ")
             control = input()
             if control == "y":
                 user_adress = input("Type your adress:")
-            print("Deseja alterar email? y/n: ")
+            print("Change email? y/n: ")
             control = input()
             if control == "y":
                 user_email = input("Type your email: ")
