@@ -1,6 +1,7 @@
 import os
-import pet_profile
-import search
+from implemtações import pet_profile
+from implemtações import user_account
+from implemtações import search
 
 shelters = {
     'Adocão': { 
@@ -61,9 +62,14 @@ def showshelter():
                 os.system("cls")
 
                 if choice == "2":
-                    print("Send your tip")
-                    donation = float(input())
-                    print(f"Our pets from {shelter_choiced} are pleased for your contribution of {donation:.2f}$")
+                    if user_account.user_age == "Unknown":
+                        print("You need have a account to do a donation")   
+                    elif user_account.user_age > 18:
+                        print("Send your tip")
+                        donation = float(input())
+                        print(f"Thanks {user_account.user_name}Our pets from {shelter_choiced} are pleased for your contribution of {donation:.2f}$")
+                    else:
+                        print("You need be a adult to do a donation")
                     input("\nPress any key to return")
                     continue
 
