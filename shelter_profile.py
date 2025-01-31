@@ -1,7 +1,7 @@
 import os
-from implemtações import pet_profile
-from implemtações import user_account
-from implemtações import search
+from pet_adoption_plataform import pet_profile
+from pet_adoption_plataform import user_account
+from pet_adoption_plataform import search
 
 shelters = {
     'Adocão': { 
