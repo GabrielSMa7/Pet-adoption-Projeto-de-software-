@@ -1,5 +1,5 @@
-import search
-import adoption
+from pet_adoption_plataform import search
+from pet_adoption_plataform import adoption
 import os 
 
 pets = {

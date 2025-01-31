@@ -1,5 +1,5 @@
-import user_account
-import shelter_profile
+from pet_adoption_plataform import user_account
+from pet_adoption_plataform import shelter_profile
 
 def adoption(pet, rescue):
 
