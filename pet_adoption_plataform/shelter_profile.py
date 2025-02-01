@@ -40,48 +40,52 @@ def showshelter():
             
             if not shelter_info:
                 continue
+
+            os.system("cls")
             
-            while True:
-                print(f"\nShelter Name: {shelter_choiced}")
-                local = shelter_info['local']
-                email = shelter_info['email']
-                phone = shelter_info['phone']
-                pets = shelter_info['pets']
-                us = shelter_info['us']
+            
+            print(f"Shelter Name: {shelter_choiced}")
+            local = shelter_info['local']
+            email = shelter_info['email']
+            phone = shelter_info['phone']
+            pets = shelter_info['pets']
+            us = shelter_info['us']
 
-                print(f"Local: {local}")
-                print(f"Email: {email}")
-                print(f"Phone: {phone}")
-                print(f"Pets: {pets}")
-                print(f"About us: {us}")
+            print(f"Local: {local}")
+            print(f"Email: {email}")
+            print(f"Phone: {phone}")
+            print(f"Pets: {pets}")
+            print(f"About us: {us}")
 
-                print("--See our availabels pets? (1)\n--Send a donation for this shelter? (2)\n--Return (3)")
-                
-                choice = input()
+            print("--See our availabels pets? (1)\n--Send a donation for this shelter? (2)\n--Return (3)\n--Exit (4)")
+            
+            choice = input()
 
-                os.system("cls")
+            os.system("cls")
 
-                if choice == "2":
-                    if user_account.user_age == "Unknown":
-                        print("You need have a account to do a donation")   
-                    elif user_account.user_age > 18:
-                        print("Send your tip")
-                        donation = float(input())
-                        print(f"Thanks {user_account.user_name}Our pets from {shelter_choiced} are pleased for your contribution of {donation:.2f}$")
-                    else:
-                        print("You need be a adult to do a donation")
-                    input("\nPress any key to return")
-                    continue
+            if choice == "2":
+                if user_account.user_age == "Unknown":
+                    print("You need have a account to do a donation")   
+                elif user_account.user_age > 18:
+                    print("Send your tip")
+                    donation = float(input())
+                    print(f"Thanks {user_account.user_name}Our pets from {shelter_choiced} are pleased for your contribution of {donation:.2f}$")
+                else:
+                    print("You need be a adult to do a donation")
+                input("\nPress any key to return")
+                continue
 
-                elif choice == "1":
-                    pets_availables = search.filtr(pet_profile.pets, "shelter", shelter_choiced)
+            elif choice == "1":
+                pets_availables = search.filtr(pet_profile.pets, "shelter", shelter_choiced)
 
-                    for pet in pets_availables.keys():
-                        print(f"Name: {pet}")
+                for pet in pets_availables.keys():
+                    print(f"Name: {pet}")
 
-                    input("\nPress any key to return")
-                    continue
-                elif choice == "3":
-                    break
+                input("\nPress any key to return")
+                continue
+            elif choice == "3":
+                continue
+            elif choice == "4":
+                break
         elif choice == "n":
             break

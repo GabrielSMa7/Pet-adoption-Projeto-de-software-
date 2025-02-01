@@ -24,3 +24,19 @@ Recursos implementados:
 # Donation Processing:
      Caso o usuario escolha a opção doar para o abrigo de adoção o programa pede o valor que vai ser doado e retorna uma mensagem de agradecimento do abrigo ajudado
 
+# Community Forum:
+     Um forum onde é possivel acessar a lista de eventos(Digitando 1), perguntas de usuarios(Digitando 2), dicas de cuidados e auxilio no processo de adoção(Digitando 3) e historias de pets resgatados(digitando 5) 
+
+# Educational Resources:
+     No menu de forum em Help and tips
+     Apresenta dicas de cuidado com pets e como funciona o processo de adoção
+
+# Event Listing and Management:
+     No menu do forum em Events
+     Apresenta uma lista de eventos agendados e mostra informações basicas deles como hórario de inicio e encerramento, local, e finalidade
+     Os eventos apresentados podem ser filtrados por tipo, eventos de vacinação ou de adoção.
+
+#  Success Stories and Testimonials:
+     No menu do forum em Successful stories
+     É apresentado uma lista com pets que já foram resgatados 
+     O usuario pode escolher qual historia ele quer ver e então é apresentado o abrigo que o pet fazia parte e sua historia

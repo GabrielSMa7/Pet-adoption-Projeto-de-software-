@@ -55,9 +55,10 @@ pets = {
 
 def showpets():
     global pets
+    filter_pets = pets
     os.system("cls")
     
-    print(f"{len(pets)} pets available!")
+    print(f"{len(filter_pets)} pets available!")
     print("Apply filters? y/n")
     choice = input()
 
@@ -92,7 +93,7 @@ def showpets():
         spc = spc.lower()
         fltrs = fltrs.lower()
 
-        pets = search.filtr(pets, fltrs, spc)
+        filter_pets = search.filtr(filter_pets, fltrs, spc)
         print("Apply another filter? y/n")
         choice = input()
 
@@ -100,40 +101,47 @@ def showpets():
         
         os.system("cls")
 
-        for pet in pets.keys():
+        for pet in filter_pets.keys():
             print(f"Name: {pet}")
 
-        print("Enter the name of the pet you want to see: ")
-        pet_choiced = input()
-        pet_choiced = pet_choiced.lower().capitalize()
-        paw_info = pets.get(pet_choiced)
-        
-        if not paw_info:
-            continue
+        print("See more informations? y/n")
+        info = input().lower()
 
-        print(f"\nPet Name: {pet_choiced}")
-        age = paw_info['age']
-        color = paw_info['color']
-        gender = paw_info['gender']
-        size = paw_info['size']
-        tpe = paw_info['type']
-        shelter = paw_info['shelter']
+        if info == "y":
+            print("Enter the name of the pet you want to see: ")
+            pet_choiced = input().lower().capitalize()
+            paw_info = filter_pets.get(pet_choiced)
+            
+            if not paw_info:
+                continue
+            
+            os.system("cls")
 
-        print(f"Age: {age}")
-        print(f"Color: {color}")
-        print(f"Gender: {gender}")
-        print(f"Size: {size}")
-        print(f"Type: {tpe}")
+            print(f"Pet Name: {pet_choiced}")
+            age = paw_info['age']
+            color = paw_info['color']
+            gender = paw_info['gender']
+            size = paw_info['size']
+            tpe = paw_info['type']
+            shelter = paw_info['shelter']
 
-        print("--Want to adopt this pet? (1)\n--Return (2)\n--Exit (3)")
-        
-        choice = input()
-        
-        if choice == "2":
-            continue
+            print(f"Age: {age}")
+            print(f"Color: {color}")
+            print(f"Gender: {gender}")
+            print(f"Size: {size}")
+            print(f"Type: {tpe}")
 
-        elif choice == "1":
-            adoption.adoption(pet_choiced, shelter)
-            break
-        elif choice == "3":
+            print("--Want to adopt this pet? (1)\n--Return (2)\n--Exit (3)")
+            
+            choice = input()
+            
+            if choice == "2":
+                continue
+
+            elif choice == "1":
+                adoption.adoption(pet_choiced, shelter)
+                break
+            elif choice == "3":
+                break
+        else:
             break
