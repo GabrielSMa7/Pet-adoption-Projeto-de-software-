@@ -2,6 +2,7 @@ import os
 from pet_adoption_plataform import pet_profile
 from pet_adoption_plataform import user_account
 from pet_adoption_plataform import search
+from pet_adoption_plataform import stories
 
 shelters = {
     'Adocão': { 
@@ -9,15 +10,14 @@ shelters = {
         'email': 'adoteme@org.com',
         'phone': '4949939052',
         'pets': '3',
-        'us': 'Lorem ipsum etiam sociosqu tincidunt ut gravida, aliquam imperdiet dolor luctus integer purus vivamus, dictumst scelerisque ac elementum nisi. torquent quisque senectus aptent purus urna dictumst scelerisque quis curae, pulvinar eros pharetra dui blandit nam id proin quis commodo, habitant platea vel netus laoreet quam semper platea. velit consequat accumsan augue auctor iaculis aliquet, ac litora massa magna nec netus, mattis volutpat ut euismod adipiscing. nec posuere turpis facilisis primis maecenas himenaeos fermentum cras eleifend, duis tortor ut nulla per rhoncus tellus phasellus mi, senectus mauris ultrices curabitur adipiscing felis justo conubia. ',
-        
+        'us': 'O Lar dos Peludos é um abrigo dedicado ao resgate e acolhimento de animais em situação de abandono e maus-tratos. Nosso objetivo é proporcionar um ambiente seguro e acolhedor para cães e gatos que precisam de uma segunda chance.'
         },
     'Amigos de pata': {
         'local':'Penedo',
         'email': 'adocao@yahoo.com',
         'phone': '63348842',
         'pets': '3',
-        'us': 'Lorem ipsum etiam sociosqu tincidunt ut gravida, aliquam imperdiet dolor luctus integer purus vivamus, dictumst scelerisque ac elementum nisi. torquent quisque senectus aptent purus urna dictumst scelerisque quis curae, pulvinar eros pharetra dui blandit nam id proin quis commodo, habitant platea vel netus laoreet quam semper platea. velit consequat accumsan augue auctor iaculis aliquet, ac litora massa magna nec netus, mattis volutpat ut euismod adipiscing. nec posuere turpis facilisis primis maecenas himenaeos fermentum cras eleifend, duis tortor ut nulla per rhoncus tellus phasellus mi, senectus mauris ultrices curabitur adipiscing felis justo conubia. ',
+        'us': 'O Abrigo Esperança Animal é um espaço dedicado ao resgate, cuidado e reabilitação de animais abandonados, maltratados ou em situação de risco. Nossa missão é oferecer um lar temporário seguro, repleto de amor e atenção, enquanto trabalhamos para encontrar famílias responsáveis e amorosas para cada um de nossos resgatados.',
     },
 }
 
@@ -56,6 +56,7 @@ def showshelter():
             print(f"Phone: {phone}")
             print(f"Pets: {pets}")
             print(f"About us: {us}")
+            print(f"Adopted pets: {len(search.filtr(stories.stories, 'shelter', shelter_choiced))}")
 
             print("--See our availabels pets? (1)\n--Send a donation for this shelter? (2)\n--Return (3)\n--Exit (4)")
             
