@@ -8,7 +8,7 @@ topics = {
         "message" : "Sou nova na cidade e queria recomendações de petshop para comprar ração de gato",
         "comments" : {
             "Matheus" : {
-                "coment" : "asdasd"
+                "coment" : "Eu sempre levo os meus no petshop do shopping"
             }
         }
     }
