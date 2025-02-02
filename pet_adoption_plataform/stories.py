@@ -29,7 +29,7 @@ def showstorie():
         if not pet_choiced:
             continue
 
-        print(f"Name: {pet}\nAdopt from: {pet_choiced["shelter"]}\nStory: {pet_choiced["story"]}")
+        print(f"Name: {choice_pet}\nAdopt from: {pet_choiced["shelter"]}\nStory: {pet_choiced["story"]}")
 
         choice = input("--Return (1)\n--Exit (2)\n")
 
